@@ -8,13 +8,13 @@ pipeline {
 
         IMAGE_NAME = 'python-app'
 
-        IMAGE_TAG = "latest"
+        IMAGE_TAG = "${BUILD_NUMBER}"
 
-        DOCKER_CREDENTIALS = 'dockerhub-creds1'
+        DOCKER_CREDENTIALS = 'dockerhub-creds'
 
-        GITOPS_CREDENTIALS = 'github-credentials'
+        GITOPS_CREDENTIALS = 'gitops-github-creds'
 
-        GITOPS_REPO = 'https://github.com/mayuri67/python-argocd-cicd.git'
+        GITOPS_REPO = 'https://github.com/mayuri67/python-argocd-gitops.git'
 
     }
 
