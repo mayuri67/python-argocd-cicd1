@@ -66,8 +66,7 @@ pipeline {
             steps {
 
                 sh '''
-                    docker build -t ${DOCKER_USER}/${IMAGE_NAME}:${IMAGE_TAG} .
-                    docker tag ${DOCKER_USER}/${IMAGE_NAME}:${IMAGE_TAG} ${DOCKER_USER}/${IMAGE_NAME}:latest
+                    docker build -t mayuri67/python-app:latest .
                 '''
 
             }
