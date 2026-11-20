@@ -10,9 +10,9 @@ pipeline {
 
         IMAGE_TAG = "latest"
 
-        DOCKER_CREDENTIALS = 'dockerhub-credentials'
+        DOCKER_CREDENTIALS = 'dockerhub-creds'
 
-        GITOPS_CREDENTIALS = 'github-credentials'
+        GITOPS_CREDENTIALS = 'github-creds'
 
         GITOPS_REPO = 'https://github.com/mayuri67/python-argocd-gitops.git'
 
@@ -78,7 +78,7 @@ pipeline {
 
                 withCredentials([
                     usernamePassword(
-                        credentialsId: 'dockerhub-credentials',
+                        credentialsId: 'dockerhub-creds',
                         usernameVariable: 'DOCKER_USERNAME',
                         passwordVariable: 'DOCKER_PASSWORD'
                     )
