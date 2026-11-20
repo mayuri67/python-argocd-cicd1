@@ -85,11 +85,10 @@ pipeline {
                 ]) {
 
                     sh '''
-                        echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+                        echo "$DOCKER_PASS" | docker login \
+                        -u "$DOCKER_USER" --password-stdin
 
-                        docker push ${DOCKER_USER}/${IMAGE_NAME}:${IMAGE_TAG}
-
-                        docker push ${DOCKER_USER}/${IMAGE_NAME}:latest
+                        docker push mayuri67/python-app:latest
 
                         docker logout
                     '''
