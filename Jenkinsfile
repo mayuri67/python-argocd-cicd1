@@ -54,7 +54,8 @@ pipeline {
             steps {
 
                 sh '''
-                    venv/bin/pytest -v
+                   export PYTHONPATH=$WORKSPACE
+                   venv/bin/python -m pytest -v
                 '''
 
             }
