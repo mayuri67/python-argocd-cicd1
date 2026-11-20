@@ -106,8 +106,8 @@ pipeline {
                 dir('gitops') {
 
                     git branch: 'main',
-                        credentialsId: "${GITOPS_CREDENTIALS}",
-                        url: "${GITOPS_REPO}"
+                        credentialsId: "gitops-github-creds",
+                        url: 'https://github.com/mayuri67/python-argocd-gitops.git'
 
                     sh '''
                         sed -i "s/^  tag:.*/  tag: \\"${IMAGE_TAG}\\"/" helm/python-app/values.yaml
