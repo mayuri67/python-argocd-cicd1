@@ -10,9 +10,9 @@ pipeline {
 
         IMAGE_TAG = "latest"
 
-        DOCKER_CREDENTIALS = 'dockerhub-creds'
+        DOCKER_CREDENTIALS = 'dockerhub-creds1'
 
-        GITOPS_CREDENTIALS = 'gitops-github-creds'
+        GITOPS_CREDENTIALS = 'github-credentials'
 
         GITOPS_REPO = 'https://github.com/mayuri67/python-argocd-cicd.git'
 
