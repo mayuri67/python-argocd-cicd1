@@ -8,7 +8,7 @@ pipeline {
 
         IMAGE_NAME = 'python-app'
 
-        IMAGE_TAG = "${BUILD_NUMBER}"
+        IMAGE_TAG = "latest"
 
         DOCKER_CREDENTIALS = 'dockerhub-creds'
 
@@ -25,7 +25,7 @@ pipeline {
             steps {
 
                 git branch: 'main',
-                    url: 'https://github.com/mayuri67/python-argocd-cicd.git'
+                    url: 'https://github.com/mayuri67/python-argocd-cicd1.git'
 
             }
         }
