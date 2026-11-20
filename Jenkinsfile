@@ -10,9 +10,9 @@ pipeline {
 
         IMAGE_TAG = "latest"
 
-        DOCKER_CREDENTIALS = 'dockerhub-creds'
+        DOCKER_CREDENTIALS = 'dockerhub-credentials'
 
-        GITOPS_CREDENTIALS = 'gitops-github-creds'
+        GITOPS_CREDENTIALS = 'github-credentials'
 
         GITOPS_REPO = 'https://github.com/mayuri67/python-argocd-gitops.git'
 
@@ -106,7 +106,7 @@ pipeline {
                 dir('gitops') {
 
                     git branch: 'main',
-                        credentialsId: "gitops-github-creds",
+                        credentialsId: "github-credentials",
                         url: 'https://github.com/mayuri67/python-argocd-gitops.git'
 
                     sh '''
